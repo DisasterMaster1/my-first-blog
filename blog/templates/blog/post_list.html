@@ -1,0 +1,29 @@
+<html>
+        <head>
+                <title>Disaster's blog</title>
+            </head>
+<body>
+    <p>Hi there!</p>
+    <p>It works!</p>
+    <div>
+        <h1><a href="/">Disaster's Djangoframework Blog</a></h1>
+    </div>
+
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
+    <div>
+    <p>published: 14.06.2019, 12:14</p>
+        <h2><a href="">My first post</a></h2>
+    <p>Good Day</p>
+    <p>published: 20.08.2019, 12:00</p>
+    <h2><a href="">My second post</a></h2>
+    <p>Peace!</p>
+    </div>
+</body>
+</html>
